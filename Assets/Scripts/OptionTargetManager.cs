@@ -8,6 +8,7 @@ public class OptionTargetManager : MonoBehaviour
     private Vector2 playerLoc;
     public bool upToDate = false;
     public List<Location> locations = new List<Location>();
+    public List<GameObject> targets = new List<GameObject>();
     public GameObject target;
     // Start is called before the first frame update
     void Start()
@@ -23,8 +24,20 @@ public class OptionTargetManager : MonoBehaviour
         playerLoc = transform.position;
         if (!upToDate)
         {
-            generateOptions();
+            GenerateOptions();
         }
+    }
+    private void GenerateOptions()
+    {
+        for (int x = 0; x < 7; x++)
+        {
+            for (int y = 0; y < 7; y++)
+            {
+                targets.Add(Instantiate(target, new Vector3(x - 3, y - 3), Quaternion.identity, transform));
+                Debug.Log("generated");
+            }
+        }
+        upToDate = true;
     }
 
     private void generateOptions()
@@ -39,7 +52,8 @@ public class OptionTargetManager : MonoBehaviour
         {
             for (int y = 0; y < 7; y++)
             {
-                checkPos = startPoint + new Vector2(x, y);
+                checkPos = playerLoc + new Vector2(x - 3, y-3);
+                //checkPos = startPoint + new Vector2(x, y);
                 Vector2 direction = checkPos - playerLoc;
                 direction = direction.normalized;
                 float distance = Vector2.Distance(playerLoc, checkPos);
@@ -54,7 +68,7 @@ public class OptionTargetManager : MonoBehaviour
                     if (hit.collider.CompareTag("Enemy"))
                     {
                         if (hit.distance < 1.5f)
-                            locations.Add(new Location(checkPos, TargetFrame.Attack));
+                            locations.Add(new Location(transform.TransformPoint(checkPos), TargetFrame.Attack));
                         else
                             locations.Add(new Location(checkPos, TargetFrame.Magic));
                     }
