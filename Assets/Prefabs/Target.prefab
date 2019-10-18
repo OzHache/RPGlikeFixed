@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8229715922960162586}
   - component: {fileID: 8229715922960162587}
   - component: {fileID: 8229715922960162580}
+  - component: {fileID: 3006268427835075559}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -99,3 +100,31 @@ MonoBehaviour:
   Available: {fileID: 21300000, guid: a43aa5e0cc7a54a9a8da580a6c3a8c5e, type: 3}
   active: 1
   scaleSmall: 0.75
+  player: {fileID: 0}
+  targetFrame: 3
+--- !u!61 &3006268427835075559
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8229715922960162581}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveableCharacter : MonoBehaviour
+public class mouseClicker : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,11 +14,5 @@ public class MoveableCharacter : MonoBehaviour
     void Update()
     {
         
-    }
-
-    internal void Move(Vector2 moveTo)
-    {
-        Vector3 move = moveTo;
-        transform.position += move;
     }
 }
