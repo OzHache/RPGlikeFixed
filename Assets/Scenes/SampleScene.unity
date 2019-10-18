@@ -312,9 +312,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1a117e7529e64cda916772b5b6b08cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
-  mp: 0
-  AC: 0
+  hp: 10
+  mp: 10
+  AC: 7
   buffed: 0
   moveableCharacter: {fileID: 605705501}
 --- !u!114 &634052086 stripped
@@ -858,6 +858,21 @@ PrefabInstance:
       propertyPath: moveableCharacter
       value: 
       objectReference: {fileID: 634052087}
+    - target: {fileID: 3141249264864299340, guid: e18f8489e9afc4689aaecc4db767dae4,
+        type: 3}
+      propertyPath: hp
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3141249264864299340, guid: e18f8489e9afc4689aaecc4db767dae4,
+        type: 3}
+      propertyPath: mp
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3141249264864299340, guid: e18f8489e9afc4689aaecc4db767dae4,
+        type: 3}
+      propertyPath: AC
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3141249264864299337, guid: e18f8489e9afc4689aaecc4db767dae4,
         type: 3}
       propertyPath: m_Enabled

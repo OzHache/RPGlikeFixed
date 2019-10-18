@@ -61,11 +61,13 @@ public class GameManager : MonoBehaviour
         {
             player.Magic(attackMagic);
         }
+        step++;
     }
 
     private void ManageBuffs()
     {
         player.BuffTimer();
         enemy.BuffTimer();
+        
     }
 }

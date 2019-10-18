@@ -106,10 +106,11 @@ public class Target : MonoBehaviour
                 GameManager.GetGameManager.Action(-directionToPlayer);
                 break;
             case TargetFrame.Attack:
-
+                GameManager.GetGameManager.Action();
                 break;
             case TargetFrame.Magic:
                 //attackMagic
+                GameManager.GetGameManager.Action(attackMagic);
                 break;
             case TargetFrame.Available:
                 break;

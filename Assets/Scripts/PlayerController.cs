@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour
         else if (buffed == 0)
         {
             AC++;
+            buffed = 3;
         }
     }
 
