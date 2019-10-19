@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public int mp;
     public int AC;
     public int buffed;
+    public bool AI;
     [SerializeField] MoveableCharacter moveableCharacter;
     //collection of potions
 
@@ -54,7 +55,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (buffed == 0)
         {
-            AC++;
+            AC--;
             buffed = 3;
         }
     }
@@ -66,8 +67,12 @@ public class PlayerController : MonoBehaviour
             buffed--;
             if (buffed == 0)
             {
-                AC--;
+                AC++;
             }
         }
+    }
+    public bool AIActivate()
+    {
+        return (AI && //some check for if the AI is still working;
     }
 }

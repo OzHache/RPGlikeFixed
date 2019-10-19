@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager GetGameManager;
     public TargetManager targetManager;
     public int step = 0;
+    public bool AITurn = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +22,17 @@ public class GameManager : MonoBehaviour
     {
         if (step >= 3)
         {
+            //reset steps
             step = 0;
+            //activate enemy
             Debug.Log("ENEMY TURN");
             Enemy();
+            //manage buffs
             ManageBuffs();
+        }
+        if (AITurn)
+        {
+            Enemy();
         }
         
     }
@@ -32,7 +40,7 @@ public class GameManager : MonoBehaviour
     private void Enemy()
     {
         //activate Enemy AI
-        step++;
+        AITurn = enemy.AIActivate();
 
     }
 
